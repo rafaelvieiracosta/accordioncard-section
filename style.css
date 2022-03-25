@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background: linear-gradient(#068be4, #0061a7);
+}
+
+main {
+  background-color: #f5f7fa;
+  width: 920px;
+  height: 509px;
+  border-radius: 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 67px 96px 83px 14px;
+}
+
+.faq h1{
+  text-transform: uppercase;
+}
+
+.faq-list{
+  margin-top: 24px;
+}
+
+.faq-list dt{
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  padding: 17px 0;
+  border-bottom: 1px solid #E9E9E9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: .2s;
+}
+
+dt:hover{
+  color: #F47B56;
+}
+dt::after{
+  content: '';
+  width: 10px;
+  height: 7px;
+  background-image: url("./img/icon-arrow-down.svg");
+  transition: .2s;
+}
+
+dt.ativo{
+  font-weight: 700;
+  border-bottom: none;
+}
+dt.ativo::after{
+  transform: rotate(180deg);
+}
+
+dd{
+  display: none;
+  font-size: 12px;
+line-height: 15px;
+}
+
+dd.ativo{
+  display: block;
+  border-bottom: 1px solid #E9E9E9;
+  padding-bottom: 17px;
+  animation: slideDown .3s forwards;
+}
+
+@keyframes slideDown{
+  from {
+    opacity: 0;
+    max-height: 0;
+  } to {
+    opacity: 1;
+    max-height: 100px;
+  }
+}

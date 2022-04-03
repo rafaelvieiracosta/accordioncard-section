@@ -1,7 +1,8 @@
 const perguntas = document.querySelectorAll(".faq-list dt");
+const box = document.querySelector(".box");
 
-perguntas[1].classList.add('ativo')
-perguntas[1].nextElementSibling.classList.add('ativo')
+perguntas[1].classList.add("ativo");
+perguntas[1].nextElementSibling.classList.add("ativo");
 
 function adicionaClasse() {
   this.classList.toggle("ativo");
